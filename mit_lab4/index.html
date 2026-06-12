@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="add-note-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Нова нотатка</span>
+        </button>
+        <div class="bg-control">
+            <span>Колір фону:</span>
+            <div class="palette-container">
+                <button id="bg-palette-btn" class="btn-icon-modern" title="Змінити колір фону">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 8.5C19 9.88071 17.8807 11 16.5 11C15.1193 11 14 9.88071 14 8.5C14 7.11929 15.1193 6 16.5 6C17.8807 6 19 7.11929 19 8.5Z" fill="currentColor"/>
+                        <path d="M14 15.5C14 16.8807 12.8807 18 11.5 18C10.1193 18 9 16.8807 9 15.5C9 14.1193 10.1193 13 11.5 13C12.8807 13 14 14.1193 14 15.5Z" fill="currentColor"/>
+                        <path d="M9 8.5C9 9.88071 7.88071 11 6.5 11C5.11929 11 4 9.88071 4 8.5C4 7.11929 5.11929 6 6.5 6C7.88071 6 9 7.11929 9 8.5Z" fill="currentColor"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.0825 21.8767 10.1938 21.6465 9.35105C21.4178 8.51406 20.5739 8 19.7042 8H17C15.8954 8 15 7.10457 15 6V3.29581C15 2.42614 14.4859 1.5822 13.649 1.35352C12.8062 1.1233 11.9175 1 12 2ZM4 12C4 7.58172 7.58172 4 12 4C12.3167 4 12.6277 4.01833 12.933 4.05389V6C12.933 8.26437 14.755 10.1 17 10.1H19.9461C19.9817 10.4053 20 10.7163 20 11.033C20 15.4513 16.4513 19 12.033 19C7.61472 19 4.066 15.4513 4.066 11.033V12Z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <div id="bg-palette-picker" class="modern-picker hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notes-container"></div>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-5 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm10 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-5 8c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z" /></svg>
+            </div>
+            <p>Ви впевнені, що хочете видалити цю нотатку?</p>
+            <div class="modal-buttons">
+                <button id="confirm-delete" class="btn-danger">Так, видалити</button>
+                <button id="cancel-delete">Скасувати</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
